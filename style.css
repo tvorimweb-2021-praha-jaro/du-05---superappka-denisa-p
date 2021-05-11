@@ -30,4 +30,204 @@ body {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
-/* ----- zde začni psát vlastní CSS ----- */
+
+nav {
+    font-size: 2rem;
+    color: #48418e;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+a{
+    text-decoration: none;
+    display: inline-block;
+    padding: 1rem;
+}
+
+a:visited {
+    color: inherit;
+}
+
+a:hover {
+    color: white;
+    background-color: #48418e;
+}
+
+.superappka{
+    text-decoration: none;
+    font-weight: 800;
+    color: white
+} /* Když se podívám na to, jak ta stránka vypadá, tak to, co tu mám nastavené se mi vůbec nechce promítnout na ten vzhled. Stalo se mi to u více věcí a vůbec netuším, kde mam chybu :( */
+
+.odkazy {
+    text-align: center;
+    width: 50%;
+    padding: 1.5rem 2rem;
+}
+
+.hlavni {
+    background-image: url(images/pozadi.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: white;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+} /* Když chci tu stránku zobrazit, tak se mi tam nezobrazuje v pozadí ten obrázek, ale přitom to tu mám nastavené :(  Celkově to neodpovídá zadání.*/
+
+.moznosti {
+    margin: 2rem 0;
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 400;
+    margin: 0;
+}
+
+.hlavni p{
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin: 1.5rem 0;
+}
+
+.tlacitko {
+    font-size: 1.7rem;
+    padding: 1rem 3rem;
+    text-align: center;
+    margin: 1rem 0;
+    border: 3px solid white;
+    border-radius: 1rem;
+    width: 100%
+}
+
+.stahnout {
+    background-color: #48418e;
+}
+
+.stahnout:focus,
+.stahnout:hover {
+    background-color: transparent;
+}
+
+.vice:focus,
+.vice:hover {
+    background-color: #48418e;
+}
+
+.ikona {
+    width: 15%;
+}
+
+.podrobnosti {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 4rem;
+}
+
+h2 {
+    color: #48418e;
+}
+
+.aktivity {
+    text-align: center;
+    margin: 1.5rem 0;
+}
+
+.aktivity p {
+    font-size: 1.2rem;
+}
+
+footer {
+    font-size: 2rem;
+    background-color: #48418e;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+@media only screen and (min-device-width: 400px) {
+    nav {
+        font-size: 1.7rem;
+    }
+
+    .moznosti {
+        flex-direction: row;
+    }
+
+    .tlacitko {
+        margin: 1rem 1rem 1rem 0;
+    }
+
+    footer {
+        font-size: 1rem;
+    }
+
+    .hlavni p {
+        font-size: 3rem;
+    }
+
+    .aktivity p {
+        font-size: 1.2rem;
+    }
+}
+
+@media only screen and (min-device-width: 600px) {
+    nav{
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        font-size: 1.4rem;
+    }
+
+    .odkazy {
+        padding: 1rem;
+        text-align: left;
+    }
+
+    .podrobnosti {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .aktivity {
+        margin: 1rem;
+    }
+}
+
+@media only screen and (min-device-width: 750px) {
+    nav {
+        font-size: 1.2rem;
+    }
+
+    .hlavni {
+        background-image: url(images/telefon.png), url(images/pozadi.jpg);
+        background-size: 40%, cover;
+        background-position: right bottom, center;
+        background-repeat: no-repeat;
+        min-height: fit-content;
+    }
+
+    .hlavni p{
+        width: 60%;
+    }
+
+    .tlacitko {
+        font-size: 1.1rem;
+    }
+
+    .podrobnosti {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .aktivity p {
+        font-size: 1.2rem;
+    }
+}
